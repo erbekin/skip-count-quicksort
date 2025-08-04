@@ -54,7 +54,7 @@ public static <T extends Comparable<T>> void quickSort3Skip(T[] a, int low, int 
     int i = low;
     int j = high;
     int s = 0;
-    T pivot = a[StdRandom.uniformInt(low, high + 1)];
+    T pivot = a[random.nextInt(high - low + 1) + low];
 
     while (i <= j) {
         while (a[j].compareTo(pivot) > 0)
